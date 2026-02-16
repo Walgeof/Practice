@@ -2,53 +2,72 @@
 
 @section('content')
 <div class="container">
-    <nav aria-label="breadcrumb" class="mb-3">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="{{ route('products.index') }}">Products</a></li>
-            <li class="breadcrumb-item active" aria-current="page">{{ $product->name }}</li>
-        </ol>
-    </nav>
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1 class="mb-0">{{ $product->name }}</h1>
+        <div>
+            <a href="{{ route('products.index') }}" class="btn btn-outline-secondary me-2">Back to products</a>
+            @can('admin')
+                <a href="{{ route('products.edit', $product) }}" class="btn btn-primary me-2">Edit</a>
+                <form action="{{ route('products.destroy', $product) }}" method="POST" class="d-inline" onsubmit="return confirm('Delete this product?');">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            @endcan
+        </div>
+    </div>
 
     <div class="row">
-        <div class="col-md-5 col-lg-4 mb-4">
-            @if($product->image)
-                <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="img-fluid rounded shadow-sm">
-            @else
-                <div class="bg-secondary rounded d-flex align-items-center justify-content-center text-white fs-1" style="aspect-ratio: 1;">No image</div>
-            @endif
+        <div class="col-md-5 mb-4 mb-md-0">
+            <div class="card h-100">
+                <div class="card-body d-flex align-items-center justify-content-center" style="min-height: 260px;">
+                    @if($product->image)
+                        <img src="{{ asset('storage/' . $product->image) }}" alt="{{ $product->name }}" class="img-fluid rounded" style="max-height: 320px; object-fit: cover;">
+                    @else
+                        <div class="bg-secondary rounded d-flex align-items-center justify-content-center text-white w-100" style="height: 260px;">
+                            <span class="fs-4">No image</span>
+                        </div>
+                    @endif
+                </div>
+            </div>
         </div>
-        <div class="col-md-7 col-lg-8">
-            <div class="d-flex justify-content-between align-items-start mb-3">
-                <h1 class="h2 mb-0">{{ $product->name }}</h1>
-                @can('admin')
-                    <div class="btn-group">
-                        <a href="{{ route('products.edit', $product) }}" class="btn btn-outline-primary">Edit</a>
-                        <form action="{{ route('products.destroy', $product) }}" method="POST" class="d-inline" onsubmit="return confirm('Delete this product?');">
+
+        <div class="col-md-7">
+            <div class="card h-100">
+                <div class="card-body d-flex flex-column">
+                    <div class="mb-3 text-muted">
+                        @if($product->category)
+                            Category: <span class="fw-semibold">{{ $product->category->name }}</span>
+                        @else
+                            <span class="text-muted">No category</span>
+                        @endif
+                    </div>
+
+                    @if($product->description)
+                        <p class="mb-4">{{ $product->description }}</p>
+                    @else
+                        <p class="mb-4 text-muted">No description provided for this product.</p>
+                    @endif
+
+                    <div class="mt-auto d-flex flex-column flex-sm-row align-items-sm-center justify-content-between">
+                        <div class="mb-3 mb-sm-0">
+                            <div class="text-muted small">Price</div>
+                            <div class="h3 mb-0">{{ number_format($product->price, 2) }}</div>
+                        </div>
+
+                        <form action="{{ route('cart.add', $product) }}" method="POST" class="d-flex align-items-center">
                             @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-outline-danger">Delete</button>
+                            <label for="quantity" class="me-2 mb-0">Quantity</label>
+                            <input type="number" name="quantity" id="quantity" value="1" min="1" class="form-control me-3" style="width: 90px;">
+                            <button type="submit" class="btn btn-success">
+                                Add to cart
+                            </button>
                         </form>
                     </div>
-                @endcan
-            </div>
-            <p class="text-muted mb-2">
-                @if($product->category)
-                    Category: {{ $product->category->name }}
-                @else
-                    Category: —
-                @endif
-            </p>
-            <p class="h4 text-primary mb-3">{{ number_format($product->price, 2) }}</p>
-            @if($product->description)
-                <div class="border-top pt-3">
-                    <h5 class="h6 text-muted text-uppercase mb-2">Description</h5>
-                    <p class="mb-0">{{ $product->description }}</p>
                 </div>
-            @endif
-            <div class="mt-4">
-                <a href="{{ route('products.index') }}" class="btn btn-secondary">Back to list</a>
             </div>
         </div>
     </div>
 </div>
 @endsection
+

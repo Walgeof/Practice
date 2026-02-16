@@ -64,6 +64,11 @@
                             <td class="text-end">
                                 <div class="btn-group btn-group-sm">
                                     <a href="{{ route('products.show', $product) }}" class="btn btn-outline-secondary">View</a>
+                                    <form action="{{ route('cart.add', $product) }}" method="POST" class="d-inline">
+                                        @csrf
+                                        <input type="hidden" name="quantity" value="1">
+                                        <button type="submit" class="btn btn-outline-success">Add to cart</button>
+                                    </form>
                                     @can('admin')
                                         <a href="{{ route('products.edit', $product) }}" class="btn btn-outline-primary">Edit</a>
                                         <form action="{{ route('products.destroy', $product) }}" method="POST" class="d-inline" onsubmit="return confirm('Delete this product?');">

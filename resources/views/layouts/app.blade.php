@@ -30,7 +30,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
+                        @php
+                            $cart = session('cart', []);
+                            $cartCount = collect($cart)->sum('quantity');
+                        @endphp
 
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('cart.index') }}">
+                                Cart @if($cartCount) ({{ $cartCount }}) @endif
+                            </a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
