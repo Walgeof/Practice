@@ -13,15 +13,6 @@ class CategoryController extends Controller
         return view('user.categories.index', compact('categories'));
     }
 
-    public function create()
-    {
-        return view('categories.create');
-    }
-
-    public function store(Request $request)
-    {
-        $category = Category::create($request->all());
-    }
 
     public function show(Category $category)
     {

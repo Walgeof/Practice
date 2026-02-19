@@ -17,7 +17,7 @@ class OrderController extends Controller
         $cart = session('cart', []);
 
         if (empty($cart)) {
-            return redirect()->route('cart.index')->with('status', 'Cart is empty.');
+            return redirect()->route('cart.index')->with('status', __('Cart is empty.'));
         }
 
         $total = collect($cart)->sum(function (array $item) {
@@ -47,7 +47,7 @@ class OrderController extends Controller
 
         return redirect()
             ->route('home')
-            ->with('status', 'Order placed. The administrator will contact you to complete payment.');
+            ->with('status', __('Order placed. The administrator will contact you to complete payment.'));
     }
 }
 

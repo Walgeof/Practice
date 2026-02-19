@@ -3,7 +3,8 @@
 @section('content')
 <div class="container">
     <div class="d-flex justify-content-between align-items-center mb-4">
-        <h1 class="mb-0">{{ __('Products') }}</h1>
+        <h1 class="mb-0">{{ __('Products Management') }}</h1>
+        <a href="{{ route('admin.products.create') }}" class="btn btn-primary">{{ __('Add product') }}</a>
     </div>
 
     @if (session('status'))
@@ -17,6 +18,7 @@
         <div class="card">
             <div class="card-body text-center text-muted py-5">
                 <p class="mb-0">{{ __('No products yet.') }}</p>
+                <a href="{{ route('admin.products.create') }}" class="btn btn-outline-primary mt-3">{{ __('Create first product') }}</a>
             </div>
         </div>
     @else
@@ -28,7 +30,7 @@
                         <th>{{ __('Name') }}</th>
                         <th>{{ __('Category') }}</th>
                         <th class="text-end">{{ __('Price') }}</th>
-                        <th style="width: 140px;" class="text-end">{{ __('Actions') }}</th>
+                        <th style="width: 200px;" class="text-end">{{ __('Actions') }}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -42,7 +44,7 @@
                                 @endif
                             </td>
                             <td>
-                                <a href="{{ route('products.show', $product) }}" class="text-decoration-none fw-medium">{{ $product->name }}</a>
+                                <a href="{{ route('admin.products.show', $product) }}" class="text-decoration-none fw-medium">{{ $product->name }}</a>
                                 @if($product->description)
                                     <div class="small text-muted text-truncate" style="max-width: 240px;">{{ $product->description }}</div>
                                 @endif
@@ -57,11 +59,12 @@
                             <td class="text-end">{{ number_format($product->price, 2) }}</td>
                             <td class="text-end">
                                 <div class="btn-group btn-group-sm">
-                                    <a href="{{ route('products.show', $product) }}" class="btn btn-outline-secondary">{{ __('View') }}</a>
-                                    <form action="{{ route('cart.add', $product) }}" method="POST" class="d-inline">
+                                    <a href="{{ route('admin.products.show', $product) }}" class="btn btn-outline-secondary">{{ __('View') }}</a>
+                                    <a href="{{ route('admin.products.edit', $product) }}" class="btn btn-outline-primary">{{ __('Edit') }}</a>
+                                    <form action="{{ route('admin.products.destroy', $product) }}" method="POST" class="d-inline" onsubmit="return confirm('{{ __('Delete this product?') }}');">
                                         @csrf
-                                        <input type="hidden" name="quantity" value="1">
-                                        <button type="submit" class="btn btn-outline-success">{{ __('Add to cart') }}</button>
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-outline-danger">{{ __('Delete') }}</button>
                                     </form>
                                 </div>
                             </td>

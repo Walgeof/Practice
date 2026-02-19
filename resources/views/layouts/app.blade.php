@@ -37,7 +37,7 @@
 
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('cart.index') }}">
-                                Cart @if($cartCount) ({{ $cartCount }}) @endif
+                                {{ __('Cart') }} @if($cartCount) ({{ $cartCount }}) @endif
                             </a>
                         </li>
                     </ul>
@@ -58,6 +58,11 @@
                                 </li>
                             @endif
                         @else
+                            @can('admin')
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('admin.dashboard') }}">{{ __('Admin') }}</a>
+                                </li>
+                            @endcan
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}

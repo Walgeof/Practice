@@ -46,7 +46,7 @@ class CartController extends Controller
 
         session()->put('cart', $cart);
 
-        return redirect()->back()->with('status', 'Product added to cart.');
+        return redirect()->back()->with('status', __('Product added to cart.'));
     }
 
     /**

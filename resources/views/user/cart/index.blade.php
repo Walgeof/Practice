@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h1 class="mb-4">Cart</h1>
+    <h1 class="mb-4">{{ __('Cart') }}</h1>
 
     @if (session('status'))
         <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -14,8 +14,8 @@
     @if(empty($cart))
         <div class="card">
             <div class="card-body text-center text-muted py-5">
-                <p class="mb-0">Your cart is empty.</p>
-                <a href="{{ route('products.index') }}" class="btn btn-primary mt-3">Go shopping</a>
+                <p class="mb-0">{{ __('Your cart is empty.') }}</p>
+                <a href="{{ route('products.index') }}" class="btn btn-primary mt-3">{{ __('Go shopping') }}</a>
             </div>
         </div>
     @else
@@ -23,12 +23,12 @@
             <table class="table table-hover align-middle">
                 <thead class="table-light">
                     <tr>
-                        <th style="width:60px;">Image</th>
-                        <th>Product</th>
-                        <th class="text-end" style="width:120px;">Price</th>
-                        <th class="text-end" style="width:120px;">Quantity</th>
-                        <th class="text-end" style="width:120px;">Subtotal</th>
-                        <th class="text-end" style="width:100px;">Actions</th>
+                        <th style="width:60px;">{{ __('Image') }}</th>
+                        <th>{{ __('Product') }}</th>
+                        <th class="text-end" style="width:120px;">{{ __('Price') }}</th>
+                        <th class="text-end" style="width:120px;">{{ __('Quantity') }}</th>
+                        <th class="text-end" style="width:120px;">{{ __('Subtotal') }}</th>
+                        <th class="text-end" style="width:100px;">{{ __('Actions') }}</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -60,10 +60,10 @@
                                 {{ number_format($item['price'] * $item['quantity'], 2) }}
                             </td>
                             <td class="text-end">
-                                <form action="{{ route('cart.remove', $productId) }}" method="POST" onsubmit="return confirm('Remove this item?');">
+                                <form action="{{ route('cart.remove', $productId) }}" method="POST" onsubmit="return confirm('{{ __('Remove this item?') }}');">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-sm btn-outline-danger">Remove</button>
+                                    <button type="submit" class="btn btn-sm btn-outline-danger">{{ __('Remove') }}</button>
                                 </form>
                             </td>
                         </tr>
@@ -71,7 +71,7 @@
                 </tbody>
                 <tfoot>
                     <tr>
-                        <th colspan="4" class="text-end">Total:</th>
+                        <th colspan="4" class="text-end">{{ __('Total') }}:</th>
                         <th class="text-end">{{ number_format($total, 2) }}</th>
                         <th></th>
                     </tr>
@@ -80,16 +80,16 @@
         </div>
 
         <div class="d-flex justify-content-between">
-            <form action="{{ route('cart.clear') }}" method="POST" onsubmit="return confirm('Clear cart?');">
+            <form action="{{ route('cart.clear') }}" method="POST" onsubmit="return confirm('{{ __('Clear cart?') }}');">
                 @csrf
                 @method('DELETE')
-                <button type="submit" class="btn btn-outline-secondary">Clear cart</button>
+                <button type="submit" class="btn btn-outline-secondary">{{ __('Clear cart') }}</button>
             </form>
 
             <form action="{{ route('orders.storeOffline') }}" method="POST">
                 @csrf
                 <button type="submit" class="btn btn-success">
-                    Place order (offline payment)
+                    {{ __('Place order (offline payment)') }}
                 </button>
             </form>
         </div>
