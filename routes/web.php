@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\OrderController;
 
 Route::get('/', function () {
     return view('index');
@@ -26,6 +27,9 @@ Route::prefix('cart')->group(function () {
     Route::delete('/remove/{product}', [CartController::class, 'remove'])->name('cart.remove');
     Route::delete('/clear', [CartController::class, 'clear'])->name('cart.clear');
 });
+
+Route::post('/orders/offline', [OrderController::class, 'storeOffline'])
+    ->name('orders.storeOffline');
 
 Auth::routes();
 

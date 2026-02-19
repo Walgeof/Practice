@@ -86,9 +86,12 @@
                 <button type="submit" class="btn btn-outline-secondary">Clear cart</button>
             </form>
 
-            <a href="#" class="btn btn-success">
-                Proceed to checkout
-            </a>
+            <form action="{{ route('orders.storeOffline') }}" method="POST">
+                @csrf
+                <button type="submit" class="btn btn-success">
+                    Place order (offline payment)
+                </button>
+            </form>
         </div>
     @endif
 </div>
