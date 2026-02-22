@@ -83,5 +83,6 @@
     "Cart is empty.": "Кошик порожній.",
     "Order placed. The administrator will contact you to complete payment.": "Замовлення оформлено. Адміністратор зв'яжеться з вами для завершення оплати.",
     "You are logged in!": "Ви успішно увійшли в систему!",
-    "View Products": "Переглянути товари"
+    "View Products": "Переглянути товари",
+    "No pending orders.": "Немає замовлень в очікуванні."
 }
