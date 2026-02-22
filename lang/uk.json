@@ -28,6 +28,7 @@
     "Product added to cart.": "Товар додано до кошика.",
     "Image": "Зображення",
     "Name": "Назва",
+    "Register Name": "Ім'я",
     "Category": "Категорія",
     "Price": "Ціна",
     "Description": "Опис",
@@ -93,5 +94,10 @@
     "cancelled": "Скасовано",
     "processing": "Обробляється",
     "No orders yet.": "Замовлень поки немає.",
-    "Start Shopping": "Почати покупки"
+    "Start Shopping": "Почати покупки",
+    "Email Address": "Електронна пошта",
+    "Password": "Пароль",
+    "Remember Me": "Запам'ятати мене",
+    "Forgot Your Password?": "Забули пароль?",
+    "Confirm Password": "Повторіть пароль"
 }
