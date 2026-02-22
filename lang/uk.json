@@ -84,5 +84,14 @@
     "Order placed. The administrator will contact you to complete payment.": "Замовлення оформлено. Адміністратор зв'яжеться з вами для завершення оплати.",
     "You are logged in!": "Ви успішно увійшли в систему!",
     "View Products": "Переглянути товари",
-    "No pending orders.": "Немає замовлень в очікуванні."
+    "No pending orders.": "Немає замовлень в очікуванні.",
+    "Recent Orders": "Останні замовлення",
+    "Items": "Кількість",
+    "Status": "Статус",
+    "pending": "В очікуванні",
+    "completed": "Завершено",
+    "cancelled": "Скасовано",
+    "processing": "Обробляється",
+    "No orders yet.": "Замовлень поки немає.",
+    "Start Shopping": "Почати покупки"
 }
