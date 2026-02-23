@@ -1,0 +1,268 @@
+[
+    {
+        "name": "Тарілка столова біла 28 см",
+        "description": "Класична біла столова тарілка з фаянсу. Діаметр 28 см. Підходить для щоденного та святкового столу.",
+        "price": 89.00,
+        "category": "Тарілки та миски",
+        "image_url": "https://content2.rozetka.com.ua/goods/images/big/603105497.jpg"
+    },
+    {
+        "name": "Тарілка десертна 22 см",
+        "description": "Десертна тарілка з білої кераміки. Універсальна для десертів та закусок.",
+        "price": 65.00,
+        "category": "Тарілки та миски",
+        "image_url": "https://content.rozetka.com.ua/goods/images/big/55165109.jpg"
+    },
+    {
+        "name": "Миска глибока 0.5 л",
+        "description": "Глибока керамічна миска для супів та каш. Легко миється, можна в духовку.",
+        "price": 120.00,
+        "category": "Тарілки та миски",
+        "image_url": "https://content.rozetka.com.ua/goods/images/big_tile/518123130.jpg"
+    },
+    {
+        "name": "Салатник овальний",
+        "description": "Овальний салатник зі скла. Ідеально для салатів та холодних закусок.",
+        "price": 155.00,
+        "category": "Тарілки та миски",
+        "image_url": "https://content.rozetka.com.ua/goods/images/big_tile/12059950.jpg"
+    },
+    {
+        "name": "Набір мисок 3 шт",
+        "description": "Набір з трьох керамічних мисок різного діаметра. Для сервірування та зберігання.",
+        "price": 249.00,
+        "category": "Тарілки та миски",
+        "image_url": "https://content1.rozetka.com.ua/goods/images/big_tile/634411443.jpg"
+    },
+    {
+        "name": "Келих для червоного вина",
+        "description": "Кришталевий келих для червоного вина. Тонка ніжка, місткість 450 мл.",
+        "price": 189.00,
+        "category": "Скло та келихи",
+        "image_url": "https://content1.rozetka.com.ua/goods/images/big_tile/549670549.jpg"
+    },
+    {
+        "name": "Келих для білого вина",
+        "description": "Елегантний келих для білого вина. Підкреслює аромат напою.",
+        "price": 175.00,
+        "category": "Скло та келихи",
+        "image_url": "https://content2.rozetka.com.ua/goods/images/big_tile/552687692.jpg"
+    },
+    {
+        "name": "Склянка для води 350 мл",
+        "description": "Висока склянка з товстим дном. Для води та холодних напоїв.",
+        "price": 45.00,
+        "category": "Скло та келихи",
+        "image_url": "https://content2.rozetka.com.ua/goods/images/big_tile/605743931.jpg"
+    },
+    {
+        "name": "Графін для води 1 л",
+        "description": "Скляний графин з пробкою. Зручно подавати воду до столу.",
+        "price": 299.00,
+        "category": "Скло та келихи",
+        "image_url": "https://content2.rozetka.com.ua/goods/images/big_tile/625490231.jpg"
+    },
+    {
+        "name": "Кухоль пивний 0.5 л",
+        "description": "Класичний пивний кухоль з ручкою. Товсте скло, місткість 500 мл.",
+        "price": 89.00,
+        "category": "Скло та келихи",
+        "image_url": "https://content1.rozetka.com.ua/goods/images/big_tile/574788145.jpg"
+    },
+    {
+        "name": "Чашка кавова з підставкою",
+        "description": "Керамічна кавова пара: чашка 200 мл та блюдце. Для еспресо та капучино.",
+        "price": 199.00,
+        "category": "Чашки та чайники",
+        "image_url": "https://content1.rozetka.com.ua/goods/images/big_tile/57648996.jpg"
+    },
+    {
+        "name": "Чашка велика 350 мл",
+        "description": "Велика чашка для кави та чаю. Зручна ручка, можна в мікрохвильовку.",
+        "price": 129.00,
+        "category": "Чашки та чайники",
+        "image_url": "https://content.rozetka.com.ua/goods/images/big_tile/526825299.jpg"
+    },
+    {
+        "name": "Чайник керамічний 1.2 л",
+        "description": "Класичний чайник для заварювання чаю. Кришка, носик, ергономічна ручка.",
+        "price": 349.00,
+        "category": "Чашки та чайники",
+        "image_url": "https://content.rozetka.com.ua/goods/images/big_tile/537710115.jpg"
+    },
+    {
+        "name": "Кавник з фільтром",
+        "description": "Скляний кавник для заварювання кави. Вбудований фільтр, місткість 800 мл.",
+        "price": 429.00,
+        "category": "Чашки та чайники",
+        "image_url": "https://content1.rozetka.com.ua/goods/images/big_tile/531602559.webp"
+    },
+    {
+        "name": "Набір чашок 6 шт",
+        "description": "Набір з шести однакових чашок для кави. Ідеально для гостей.",
+        "price": 599.00,
+        "category": "Чашки та чайники",
+        "image_url": "https://content.rozetka.com.ua/goods/images/big_tile/652098526.jpg"
+    },
+    {
+        "name": "Виделки столові 3 шт",
+        "description": "Набір з трьох столових виделок. Для щоденного використання та сервірування.",
+        "price": 105.00,
+        "category": "Столові прибори",
+        "image_url": "https://content1.rozetka.com.ua/goods/images/big_tile/12830356.jpg"
+    },
+    {
+        "name": "Ложки столові 3 шт",
+        "description": "Набір з трьох столових ложок. Для щоденного використання та сервірування.",
+        "price": 96.00,
+        "category": "Столові прибори",
+        "image_url": "https://content2.rozetka.com.ua/goods/images/big_tile/64779380.jpg"
+    },
+    {
+        "name": "Ніж столовий 3 шт",
+        "description": "Набір з трьох столових ніжів. Для щоденного використання та сервірування.",
+        "price": 42.00,
+        "category": "Столові прибори",
+        "image_url": "https://content.rozetka.com.ua/goods/images/big_tile/620685591.png"
+    },
+    {
+        "name": "Набір столових приборів 24 предмети",
+        "description": "Повний набір: 6 виделок, 6 ложок, 6 ножів, 6 чайних ложок. Нержавіюча сталь.",
+        "price": 899.00,
+        "category": "Столові прибори",
+        "image_url": "https://content.rozetka.com.ua/goods/images/big_tile/410566610.jpg"
+    },
+    {
+        "name": "Ложки чайні 3 шт",
+        "description": "Набір з трьох чайних ложок. Для щоденного використання та сервірування.",
+        "price": 28.00,
+        "category": "Столові прибори",
+        "image_url": "https://content1.rozetka.com.ua/goods/images/big_tile/11582308.jpg"
+    },
+    {
+        "name": "Сервіз обідній 12 персон",
+        "description": "Повний обідній сервіз: тарілки, миски, чашки. Кераміка біла з тонкою каймою.",
+        "price": 3499.00,
+        "category": "Сервіз та набори",
+        "image_url": "https://content2.rozetka.com.ua/goods/images/big/548076724.jpg"
+    },
+    {
+        "name": "Сервіз чайний 6 персон",
+        "description": "Чайний сервіз: чашки, блюдця, чайник, цукерниця. Класичний дизайн.",
+        "price": 1899.00,
+        "category": "Сервіз та набори",
+        "image_url": "https://content2.rozetka.com.ua/goods/images/big_tile/469086103.jpg"
+    },
+    {
+        "name": "Підставка під гарячу посудину",
+        "description": "Тримач під гарячу посудину. Кераміка, захищає стіл від нагріву.",
+        "price": 79.00,
+        "category": "Аксесуари",
+        "image_url": "https://content.rozetka.com.ua/goods/images/big_tile/602526521.jpg"
+    },
+    {
+        "name": "Підставка для ножів",
+        "description": "Дерев'яна підставка для столових ножів. Зберігає леза та порядок у шухляді.",
+        "price": 199.00,
+        "category": "Аксесуари",
+        "image_url": "https://content.rozetka.com.ua/goods/images/big_tile/299463693.jpg"
+    },
+    {
+        "name": "Серветки паперові 400 шт",
+        "description": "Білі серветки для столу. М'які, двшарові. Упаковка 400 штук.",
+        "price": 45.00,
+        "category": "Аксесуари",
+        "image_url": "https://content2.rozetka.com.ua/goods/images/big_tile/67159880.jpg"
+    },
+    {
+        "name": "Тримач для серветок",
+        "description": "Металевий тримач для серветок. Класичний дизайн, підходить до будь-якого столу.",
+        "price": 159.00,
+        "category": "Аксесуари",
+        "image_url": "https://content2.rozetka.com.ua/goods/images/big_tile/412804032.jpg"
+    },
+    {
+        "name": "Підсвічник керамічний",
+        "description": "Низький підсвічник для свічки-таблетки. Прикрасить вечерю при свічках.",
+        "price": 129.00,
+        "category": "Аксесуари",
+        "image_url": "https://content2.rozetka.com.ua/goods/images/big_tile/423722932.jpg"
+    },
+    {
+        "name": "Ваза для фруктів",
+        "description": "Середня керамічна ваза для фруктів. Стильний центр столу.",
+        "price": 449.00,
+        "category": "Аксесуари",
+        "image_url": "https://content1.rozetka.com.ua/goods/images/big/543601384.jpg"
+    },
+    {
+        "name": "Тарілка хлібна 18 см",
+        "description": "Невелика тарілка для хліба та масла. Біла кераміка.",
+        "price": 55.00,
+        "category": "Тарілки та миски",
+        "image_url": "https://content2.rozetka.com.ua/goods/images/big/10751599.jpg"
+    },
+    {
+        "name": "Келих для шампанського",
+        "description": "Класичний келих-флейт для шампанського та ігристих вин.",
+        "price": 165.00,
+        "category": "Скло та келихи",
+        "image_url": "https://content2.rozetka.com.ua/goods/images/big_tile/586162432.jpg"
+    },
+    {
+        "name": "Чайник заварний скляний",
+        "description": "Скляний чайник для заварювання. Зручно бачити колір чаю.",
+        "price": 279.00,
+        "category": "Чашки та чайники",
+        "image_url": "https://content.rozetka.com.ua/goods/images/big_tile/535299093.jpg"
+    },
+    {
+        "name": "Набір келихів 6 шт",
+        "description": "Шість однакових келихів для вина. Універсальний розмір.",
+        "price": 799.00,
+        "category": "Скло та келихи",
+        "image_url": "https://content.rozetka.com.ua/goods/images/big/628875046.jpg"
+    },
+    {
+        "name": "Блюдце кавове",
+        "description": "Блюдце під кавову чашку. Біла кераміка, діаметр 14 см.",
+        "price": 48.00,
+        "category": "Чашки та чайники",
+        "image_url": "https://content.rozetka.com.ua/goods/images/big_tile/557517844.png"
+    },
+    {
+        "name": "Ніж для масла",
+        "description": "Ніж з тупим лезом для масла. Класичний столовий аксесуар.",
+        "price": 89.00,
+        "category": "Столові прибори",
+        "image_url": "https://content1.rozetka.com.ua/goods/images/big_tile/497660288.jpg"
+    },
+    {
+        "name": "Сахарниця з кришкою",
+        "description": "Керамічна цукерниця з кришкою та ложкою. Для чаю та кави.",
+        "price": 179.00,
+        "category": "Аксесуари",
+        "image_url": "https://content2.rozetka.com.ua/goods/images/big_tile/636640434.jpg"
+    },
+    {
+        "name": "Молочник керамічний",
+        "description": "Невеликий молочник для кави та чаю. Місткість 200 мл.",
+        "price": 139.00,
+        "category": "Чашки та чайники",
+        "image_url": "https://content.rozetka.com.ua/goods/images/big_tile/312155171.jpg"
+    },
+    {
+        "name": "Салатник круглий великий",
+        "description": "Великий круглий салатник для святкового столу. Діаметр 28 см.",
+        "price": 289.00,
+        "category": "Тарілки та миски",
+        "image_url": "https://content1.rozetka.com.ua/goods/images/big_tile/66909628.jpg"
+    },
+    {
+        "name": "Графін для соку",
+        "description": "Скляний графин з носиком. Для соку та холодних напоїв, 1.2 л.",
+        "price": 329.00,
+        "category": "Скло та келихи",
+        "image_url": "https://content2.rozetka.com.ua/goods/images/big_tile/625490231.jpg"
+    }
+]

@@ -55,9 +55,6 @@
                     @else
                         <div class="mt-4">
                             <p class="text-muted">{{ __('No orders yet.') }}</p>
-                            <a href="{{ route('products.index') }}" class="btn btn-outline-primary">
-                                {{ __('Start Shopping') }}
-                            </a>
                         </div>
                     @endif
                 </div>
