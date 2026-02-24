@@ -17,7 +17,25 @@
         <a href="{{ route('categories.index') }}" class="btn btn-outline-secondary btn-sm mt-2">{{ __('Back to list') }}</a>
     </div>
 
-    <h2 class="h5 mb-3">{{ __('Products in this category') }}</h2>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="h5 mb-0">{{ __('Products in this category') }}</h2>
+        <div class="d-flex gap-2 align-items-center">
+            <span class="text-muted small">{{ __('Sort by:') }}</span>
+            @foreach(['name' => __('Name'), 'price' => __('Price')] as $col => $label)
+                @php
+                    $isActive = $sort === $col;
+                    $newDir = ($isActive && $direction === 'asc') ? 'desc' : 'asc';
+                @endphp
+                <a href="{{ route('categories.show', [$category, 'sort' => $col, 'direction' => $newDir]) }}"
+                   class="btn btn-sm {{ $isActive ? 'btn-secondary' : 'btn-outline-secondary' }}">
+                    {{ $label }}
+                    @if($isActive)
+                        {{ $direction === 'asc' ? '↑' : '↓' }}
+                    @endif
+                </a>
+            @endforeach
+        </div>
+    </div>
 
     @if($category->products->isEmpty())
         <div class="card">

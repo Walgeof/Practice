@@ -4,6 +4,22 @@
 <div class="container">
     <div class="d-flex justify-content-between align-items-center mb-4">
         <h1 class="mb-0">{{ __('Products') }}</h1>
+        <div class="d-flex gap-2 align-items-center">
+            <span class="text-muted small">{{ __('Sort by:') }}</span>
+            @foreach(['name' => __('Name'), 'price' => __('Price')] as $col => $label)
+                @php
+                    $isActive = $sort === $col;
+                    $newDir = ($isActive && $direction === 'asc') ? 'desc' : 'asc';
+                @endphp
+                <a href="{{ route('products.index', ['sort' => $col, 'direction' => $newDir]) }}"
+                   class="btn btn-sm {{ $isActive ? 'btn-secondary' : 'btn-outline-secondary' }}">
+                    {{ $label }}
+                    @if($isActive)
+                        {{ $direction === 'asc' ? '↑' : '↓' }}
+                    @endif
+                </a>
+            @endforeach
+        </div>
     </div>
 
     @if (session('status'))
