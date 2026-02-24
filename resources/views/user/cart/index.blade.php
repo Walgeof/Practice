@@ -82,10 +82,26 @@
             </form>
 
             <form action="{{ route('orders.storeOffline') }}" method="POST">
-                @csrf
-                <button type="submit" class="btn btn-success">
-                    {{ __('Place order (offline payment)') }}
-                </button>
+                @auth
+                    @csrf
+                    <button type="submit" class="btn btn-success">
+                        {{ __('Place order (offline payment)') }}
+                    </button>
+                @else
+                    <div class="alert alert-warning mb-0" role="alert">
+                        {{ __('You need to log in to place an order.') }} 
+                    </div>
+                    <div>
+                        <a href="{{ route('login') }}" class="btn btn-primary">
+                            {{ __('Log in') }}
+                        </a>
+                    </div>
+                    <div>
+                        <a href="{{ route('register') }}" class="btn btn-primary">
+                            {{__('Register')}}
+                        </a>
+                    </div>
+                @endauth
             </form>
         </div>
     @endif
