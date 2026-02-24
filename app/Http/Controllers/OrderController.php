@@ -49,5 +49,19 @@ class OrderController extends Controller
             ->route('home')
             ->with('status', __('Order placed. The administrator will contact you to complete payment.'));
     }
+
+    /**
+     * Mark an order as paid/completed (admin only).
+     */
+    public function markPaid(Order $order): RedirectResponse
+    {
+        $this->authorize('admin');
+
+        if ($order->status !== 'completed') {
+            $order->update(['status' => 'completed']);
+        }
+
+        return redirect()->back()->with('status', __('Order marked as paid.'));
+    }
 }
 

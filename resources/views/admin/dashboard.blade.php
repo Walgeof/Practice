@@ -56,6 +56,14 @@
                                         <td>{{ $order->user?->name ?? __('Guest') }}</td>
                                         <td>{{ $order->created_at?->format('d.m.Y') }}</td>
                                         <td>{{ number_format($order->total, 2) }}</td>
+                                        <td>
+                                            <form method="POST" action="{{ route('admin.orders.markPaid', $order->id) }}" style="display:inline;">
+                                                @csrf
+                                                <button type="submit" class="btn btn-sm btn-success">
+                                                    {{ __('Mark as paid') }}
+                                                </button>
+                                            </form>
+                                        </td>
                                     </tr>
                                 @endforeach
                             </tbody>

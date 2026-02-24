@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+                <div class="card-header">{{ __('Home page') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,8 +14,6 @@
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="{{ __('Close') }}"></button>
                         </div>
                     @endif
-
-                    <p>{{ __('You are logged in!') }}</p>
                     <a href="{{ route('products.index') }}" class="btn btn-primary mb-4">
                         {{ __('View Products') }}
                     </a>
@@ -29,7 +27,7 @@
                                         <tr>
                                             <th>#</th>
                                             <th>{{ __('Date') }}</th>
-                                            <th>{{ __('Items') }}</th>
+                                            <th>{{ __('Unique items') }}</th>
                                             <th class="text-end">{{ __('Total') }}</th>
                                             <th>{{ __('Status') }}</th>
                                         </tr>
@@ -37,7 +35,7 @@
                                     <tbody>
                                         @foreach($orders as $order)
                                             <tr>
-                                                <td>{{ $order->id }}</td>
+                                                <td>{{ $loop->iteration }}</td>
                                                 <td>{{ $order->created_at->format('d.m.Y H:i') }}</td>
                                                 <td>{{ $order->items->count() }}</td>
                                                 <td class="text-end">{{ number_format($order->total, 2) }}</td>
@@ -57,6 +55,14 @@
                             <p class="text-muted">{{ __('No orders yet.') }}</p>
                         </div>
                     @endif
+                    <div class="mt-5 d-flex justify-content-end">
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <button type="submit" class="btn btn-danger">
+                                {{ __('Logout') }}
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

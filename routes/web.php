@@ -25,6 +25,7 @@ Route::resource('categories', CategoryController::class)->only(['index', 'show']
 
 Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('admin.dashboard');
+
     Route::resource('products', AdminProductController::class)->names([
         'index' => 'admin.products.index',
         'create' => 'admin.products.create',
@@ -34,6 +35,7 @@ Route::prefix('admin')->middleware('auth')->group(function () {
         'update' => 'admin.products.update',
         'destroy' => 'admin.products.destroy',
     ]);
+
     Route::resource('categories', AdminCategoryController::class)->names([
         'index' => 'admin.categories.index',
         'create' => 'admin.categories.create',
@@ -43,6 +45,9 @@ Route::prefix('admin')->middleware('auth')->group(function () {
         'update' => 'admin.categories.update',
         'destroy' => 'admin.categories.destroy',
     ]);
+
+    Route::post('/orders/{order}/paid', [OrderController::class, 'markPaid'])
+        ->name('admin.orders.markPaid');
 });
 
 Route::prefix('cart')->group(function () {
