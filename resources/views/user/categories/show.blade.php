@@ -19,7 +19,8 @@
 
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h2 class="h5 mb-0">{{ __('Products in this category') }}</h2>
-        <div class="d-flex gap-2 align-items-center">
+        <div class="d-flex gap-2 align-items-center flex-wrap justify-content-end">
+            <input id="product-search" type="search" class="form-control form-control-sm" placeholder="{{ __('Search by name…') }}" style="width: 200px;" autocomplete="off">
             <span class="text-muted small">{{ __('Sort by:') }}</span>
             @foreach(['name' => __('Name'), 'price' => __('Price')] as $col => $label)
                 @php
@@ -83,9 +84,35 @@
                             </td>
                         </tr>
                     @endforeach
+                    <tr id="products-no-results" style="display:none;">
+                        <td colspan="4" class="text-center text-muted py-4">{{ __('No products match your search.') }}</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
     @endif
 </div>
 @endsection
+
+@push('scripts')
+<script>
+    (function () {
+        const input = document.getElementById('product-search');
+        if (!input) return;
+        const tbody = document.querySelector('table tbody');
+        const noResults = document.getElementById('products-no-results');
+
+        input.addEventListener('input', function () {
+            const query = this.value.trim().toLowerCase();
+            let visible = 0;
+            tbody.querySelectorAll('tr:not(#products-no-results)').forEach(function (row) {
+                const name = (row.cells[1] ? row.cells[1].textContent : '').toLowerCase();
+                const match = name.includes(query);
+                row.style.display = match ? '' : 'none';
+                if (match) visible++;
+            });
+            noResults.style.display = visible === 0 ? '' : 'none';
+        });
+    })();
+</script>
+@endpush

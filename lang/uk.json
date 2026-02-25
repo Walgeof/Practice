@@ -106,5 +106,7 @@
     "Mark as paid": "Позначити як оплачене",
     "Log in": "Увійти",
     "You need to log in to place an order.": "Вам треба увійти в акаунт, щоб здійснити замовлення.",
-    "Sort by:": "Сортувати за:"
+    "Sort by:": "Сортувати за:",
+    "Search by name…": "Знайти за назвою…",
+    "No products match your search.": "Товарів з такою назвою не знайдено"
 }
