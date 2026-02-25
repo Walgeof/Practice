@@ -53,7 +53,7 @@
                                 @foreach($stats['pending_orders'] as $idx => $order)
                                     <tr>
                                         <td>{{ $idx + 1 }}</td>
-                                        <td>{{ $order->user?->name ?? __('Guest') }}</td>
+                                        <td>{{ $order->user?->email ?? __('Guest') }}</td>
                                         <td>{{ $order->created_at?->format('d.m.Y') }}</td>
                                         <td>{{ number_format($order->total, 2) }}</td>
                                         <td>
